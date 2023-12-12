@@ -22614,7 +22614,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[11]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[205]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
@@ -22631,7 +22631,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[12]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[206]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Import the Data</span>
@@ -22653,7 +22653,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[12]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[206]:</div>
 
 
 
@@ -22798,7 +22798,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[13]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[207]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Removing unnecessary columns</span>
@@ -22820,7 +22820,7 @@ dtype: object</pre>
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[13]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[207]:</div>
 
 
 
@@ -22970,10 +22970,12 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[35]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[208]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating the Correlation Matrix</span>
+
+<span class="n">correlation_matrix</span> <span class="o">=</span> <span class="n">data</span><span class="p">[[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span>
                           <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Distance&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">,</span>
                           <span class="s2">&quot;Diff_Ground&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ctrl&quot;</span><span class="p">]]</span><span class="o">.</span><span class="n">corr</span><span class="p">()</span>
 
@@ -23022,20 +23024,20 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[38]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[209]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding VIF Scores</span>
+
+<span class="kn">from</span> <span class="nn">statsmodels.stats.outliers_influence</span> <span class="kn">import</span> <span class="n">variance_inflation_factor</span>
 <span class="n">data_with_const</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">add_constant</span><span class="p">(</span><span class="n">data</span><span class="p">[[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span>
                           <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">,</span>
                           <span class="s2">&quot;Diff_Ground&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ctrl&quot;</span><span class="p">]])</span>
 
-<span class="c1"># Calculate VIF for each variable</span>
 <span class="n">vif_data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">()</span>
 <span class="n">vif_data</span><span class="p">[</span><span class="s2">&quot;Variable&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data_with_const</span><span class="o">.</span><span class="n">columns</span>
 <span class="n">vif_data</span><span class="p">[</span><span class="s2">&quot;VIF&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">variance_inflation_factor</span><span class="p">(</span><span class="n">data_with_const</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">data_with_const</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">])]</span>
 
-<span class="c1"># Display the VIF values</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">vif_data</span><span class="p">)</span>
 </pre></div>
 
@@ -23085,7 +23087,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[14]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[210]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating the training and testing set</span>
@@ -23107,7 +23109,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[15]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[211]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Adjusting the training and testing sets</span>
@@ -23128,7 +23130,7 @@ dtype: object</pre>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[16]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[212]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating the Model</span>
@@ -23170,7 +23172,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                 2312
 Model:                          Logit   Df Residuals:                     2301
 Method:                           MLE   Df Model:                           10
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                  0.4753
-Time:                        01:28:47   Log-Likelihood:                -800.85
+Time:                        13:02:14   Log-Likelihood:                -800.85
 converged:                       True   LL-Null:                       -1526.4
 Covariance Type:            nonrobust   LLR p-value:                8.855e-306
 ===============================================================================
@@ -23205,10 +23207,12 @@ Diff_Ctrl       1.3975      0.099     14.151      0.000       1.204       1.591
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[17]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[213]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>  <span class="c1"># Use the same scaler as on the training set</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding the Accuracy</span>
+
+<span class="n">X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>  <span class="c1"># Use the same scaler as on the training set</span>
 <span class="n">X_test_with_intercept</span> <span class="o">=</span> <span class="n">add_constant</span><span class="p">(</span><span class="n">X_test_scaled</span><span class="p">)</span>
 
 <span class="c1"># Predict on the test set</span>
@@ -23257,10 +23261,12 @@ Diff_Ctrl       1.3975      0.099     14.151      0.000       1.204       1.591
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[18]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[214]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_train_adj</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating New Training Dataframe</span>
+
+<span class="n">X_train_adj</span> <span class="o">=</span> <span class="n">X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="n">third_quartile_value</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
 <span class="n">X_train_adj</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_train_adj</span><span class="p">[</span><span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">third_quartile_value</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
@@ -23277,10 +23283,12 @@ Diff_Ctrl       1.3975      0.099     14.151      0.000       1.204       1.591
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[19]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[215]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test_adj</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating New Testing Dataframe</span>
+
+<span class="n">X_test_adj</span> <span class="o">=</span> <span class="n">X_test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="n">third_quartile_value</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
 <span class="n">X_test_adj</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">X_test_adj</span><span class="p">[</span><span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">third_quartile_value</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
@@ -23297,7 +23305,7 @@ Diff_Ctrl       1.3975      0.099     14.151      0.000       1.204       1.591
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[20]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[216]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating the Model</span>
@@ -23340,7 +23348,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                 2312
 Model:                          Logit   Df Residuals:                     2301
 Method:                           MLE   Df Model:                           10
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                  0.4755
-Time:                        01:28:55   Log-Likelihood:                -800.67
+Time:                        13:02:20   Log-Likelihood:                -800.67
 converged:                       True   LL-Null:                       -1526.4
 Covariance Type:            nonrobust   LLR p-value:                7.435e-306
 ===================================================================================
@@ -23369,7 +23377,7 @@ Diff_Ctrl           1.3933      0.099     14.138      0.000       1.200       1.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[21]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[217]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding Accuracy</span>
@@ -23421,10 +23429,12 @@ Diff_Ctrl           1.3933      0.099     14.138      0.000       1.200       1.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[22]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[218]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating the New Model</span>
+
+<span class="n">features_adj</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> 
             <span class="s2">&quot;Diff_Ground&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ctrl&quot;</span><span class="p">]</span>
 
 <span class="n">X_train_adj</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -23436,7 +23446,7 @@ Diff_Ctrl           1.3933      0.099     14.138      0.000       1.200       1.
 
 <span class="n">logit_model_adj</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">X_train_adj_scaled_with_intercept</span><span class="p">)</span>
 <span class="n">result_adj_1</span> <span class="o">=</span> <span class="n">logit_model_adj</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result_adj_1</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_adj_1</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features_adj</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -23465,7 +23475,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                 2312
 Model:                          Logit   Df Residuals:                     2303
 Method:                           MLE   Df Model:                            8
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                  0.4750
-Time:                        01:29:21   Log-Likelihood:                -801.38
+Time:                        13:02:24   Log-Likelihood:                -801.38
 converged:                       True   LL-Null:                       -1526.4
 Covariance Type:            nonrobust   LLR p-value:                8.244e-308
 ===============================================================================
@@ -23492,10 +23502,12 @@ Diff_Ctrl       1.3941      0.099     14.153      0.000       1.201       1.587
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[23]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[219]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X_test_adj</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding the Accuracy</span>
+
+<span class="n">X_test_adj</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="n">X_test_adj_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">X_test_adj</span><span class="p">)</span>  
 <span class="n">X_test_adj_with_intercept</span> <span class="o">=</span> <span class="n">add_constant</span><span class="p">(</span><span class="n">X_test_adj_scaled</span><span class="p">)</span>
@@ -23556,7 +23568,7 @@ Diff_Ctrl       1.3941      0.099     14.153      0.000       1.201       1.587
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[24]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[220]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating the training and testing sets</span>
@@ -23573,7 +23585,7 @@ Diff_Ctrl       1.3941      0.099     14.153      0.000       1.201       1.587
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[25]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[221]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating predictors and targets</span>
@@ -23594,7 +23606,7 @@ Diff_Ctrl       1.3941      0.099     14.153      0.000       1.201       1.587
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[26]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[222]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Building the model</span>
@@ -23636,7 +23648,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                 1778
 Model:                          Logit   Df Residuals:                     1767
 Method:                           MLE   Df Model:                           10
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                  0.6433
-Time:                        01:29:46   Log-Likelihood:                -414.44
+Time:                        13:02:33   Log-Likelihood:                -414.44
 converged:                       True   LL-Null:                       -1161.7
 Covariance Type:            nonrobust   LLR p-value:                     0.000
 ===============================================================================
@@ -23671,19 +23683,18 @@ Diff_Ctrl       1.7974      0.149     12.094      0.000       1.506       2.089
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[27]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[223]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ud_X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">ud_X_test</span><span class="p">)</span>  <span class="c1"># Use the same scaler as on the training set</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding the Accuracy</span>
+
+<span class="n">ud_X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">ud_X_test</span><span class="p">)</span>  
 <span class="n">ud_X_test_with_intercept</span> <span class="o">=</span> <span class="n">add_constant</span><span class="p">(</span><span class="n">ud_X_test_scaled</span><span class="p">)</span>
 
-<span class="c1"># Predict on the test set</span>
 <span class="n">ud_y_pred</span> <span class="o">=</span> <span class="n">ud_result</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">ud_X_test_with_intercept</span><span class="p">)</span>
 
-<span class="c1"># Convert predicted probabilities to binary predictions (0 or 1)</span>
 <span class="n">ud_y_pred_binary</span> <span class="o">=</span> <span class="p">(</span><span class="n">ud_y_pred</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
-<span class="c1"># Calculate accuracy</span>
 <span class="n">accuracy_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">ud_y_pred_binary</span> <span class="o">==</span> <span class="n">ud_y_test</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
 <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy_2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
@@ -23723,10 +23734,12 @@ Diff_Ctrl       1.7974      0.149     12.094      0.000       1.506       2.089
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[28]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[224]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ud_X_train_adj</span> <span class="o">=</span> <span class="n">ud_X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating New Training Dataframe</span>
+
+<span class="n">ud_X_train_adj</span> <span class="o">=</span> <span class="n">ud_X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="n">third_quartile_value</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
 <span class="n">ud_X_train_adj</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ud_X_train_adj</span><span class="p">[</span><span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">third_quartile_value</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
@@ -23743,10 +23756,12 @@ Diff_Ctrl       1.7974      0.149     12.094      0.000       1.506       2.089
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[29]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[225]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ud_X_test_adj</span> <span class="o">=</span> <span class="n">ud_X_test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating New Testing Dataframe</span>
+
+<span class="n">ud_X_test_adj</span> <span class="o">=</span> <span class="n">ud_X_test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="n">third_quartile_value</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.95</span><span class="p">)</span>
 <span class="n">ud_X_test_adj</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">ud_X_test_adj</span><span class="p">[</span><span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">third_quartile_value</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
@@ -23763,10 +23778,12 @@ Diff_Ctrl       1.7974      0.149     12.094      0.000       1.506       2.089
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[30]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[226]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features_3</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating New Model</span>
+
+<span class="n">features_3</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> 
             <span class="s2">&quot;Diff_Clinch_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ground&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ctrl&quot;</span><span class="p">]</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 <span class="n">ud_X_train_adj_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">ud_X_train_adj</span><span class="p">)</span>
@@ -23803,7 +23820,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                 1778
 Model:                          Logit   Df Residuals:                     1767
 Method:                           MLE   Df Model:                           10
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                  0.6424
-Time:                        01:30:20   Log-Likelihood:                -415.43
+Time:                        13:02:40   Log-Likelihood:                -415.43
 converged:                       True   LL-Null:                       -1161.7
 Covariance Type:            nonrobust   LLR p-value:                     0.000
 ===================================================================================
@@ -23838,10 +23855,12 @@ Diff_Ctrl           1.8119      0.149     12.121      0.000       1.519       2.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[243]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[227]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ud_X_test_scaled_adj</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">ud_X_test_adj</span><span class="p">)</span>  
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding Accuracy</span>
+
+<span class="n">ud_X_test_scaled_adj</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">ud_X_test_adj</span><span class="p">)</span>  
 <span class="n">ud_X_test_with_intercept_adj</span> <span class="o">=</span> <span class="n">add_constant</span><span class="p">(</span><span class="n">ud_X_test_scaled_adj</span><span class="p">)</span>
 
 <span class="n">ud_y_pred</span> <span class="o">=</span> <span class="n">ud_result_adj</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">ud_X_test_with_intercept_adj</span><span class="p">)</span>
@@ -23887,10 +23906,12 @@ Diff_Ctrl           1.8119      0.149     12.121      0.000       1.519       2.
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[31]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[228]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating New Model</span>
+
+<span class="n">features_adj_1</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> 
             <span class="s2">&quot;Diff_Ground&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ctrl&quot;</span><span class="p">]</span>
 
 <span class="n">ud_X_train_adj</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Kd&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
@@ -23901,7 +23922,7 @@ Diff_Ctrl           1.8119      0.149     12.121      0.000       1.519       2.
 
 <span class="n">ud_logit_model_adj</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">ud_y_train</span><span class="p">,</span> <span class="n">ud_X_train_adj_with_intercept</span><span class="p">)</span>
 <span class="n">ud_result_adj_1</span> <span class="o">=</span> <span class="n">ud_logit_model_adj</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ud_result_adj_1</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ud_result_adj_1</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features_adj_1</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -23930,7 +23951,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                 1778
 Model:                          Logit   Df Residuals:                     1770
 Method:                           MLE   Df Model:                            7
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                  0.6404
-Time:                        01:31:22   Log-Likelihood:                -417.79
+Time:                        13:02:46   Log-Likelihood:                -417.79
 converged:                       True   LL-Null:                       -1161.7
 Covariance Type:            nonrobust   LLR p-value:                     0.000
 ===============================================================================
@@ -23956,10 +23977,12 @@ Diff_Ctrl       1.7921      0.148     12.138      0.000       1.503       2.082
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[32]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[229]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">ud_X_test_adj</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Kd&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding Accuracy</span>
+
+<span class="n">ud_X_test_adj</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Kd&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
 <span class="n">ud_X_test_scaled_adj</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">ud_X_test_adj</span><span class="p">)</span>  
 <span class="n">ud_X_test_with_intercept_adj</span> <span class="o">=</span> <span class="n">add_constant</span><span class="p">(</span><span class="n">ud_X_test_scaled_adj</span><span class="p">)</span>
@@ -23968,8 +23991,8 @@ Diff_Ctrl       1.7921      0.148     12.138      0.000       1.503       2.082
 
 <span class="n">ud_y_pred_binary</span> <span class="o">=</span> <span class="p">(</span><span class="n">ud_y_pred</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
-<span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">ud_y_pred_binary</span> <span class="o">==</span> <span class="n">ud_y_test</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">accuracy_adj_2</span> <span class="o">=</span> <span class="p">(</span><span class="n">ud_y_pred_binary</span> <span class="o">==</span> <span class="n">ud_y_test</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy_adj_2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -24012,10 +24035,12 @@ Diff_Ctrl       1.7921      0.148     12.138      0.000       1.503       2.082
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[213]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[230]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">train</span><span class="p">[</span><span class="s2">&quot;Method&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;S-DEC&quot;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating Subset of Data</span>
+
+<span class="n">sd_train</span> <span class="o">=</span> <span class="n">train</span><span class="p">[</span><span class="n">train</span><span class="p">[</span><span class="s2">&quot;Method&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;S-DEC&quot;</span><span class="p">]</span>
 <span class="n">sd_test</span> <span class="o">=</span> <span class="n">test</span><span class="p">[</span><span class="n">test</span><span class="p">[</span><span class="s2">&quot;Method&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;S-DEC&quot;</span><span class="p">]</span>
 </pre></div>
 
@@ -24027,7 +24052,7 @@ Diff_Ctrl       1.7921      0.148     12.138      0.000       1.503       2.082
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[214]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[231]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd_X_train</span> <span class="o">=</span> <span class="n">sd_train</span><span class="p">[[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> 
@@ -24046,10 +24071,12 @@ Diff_Ctrl       1.7921      0.148     12.138      0.000       1.503       2.082
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[215]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[232]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating Model</span>
+
+<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> 
             <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ground&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ctrl&quot;</span><span class="p">]</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 <span class="n">sd_X_train_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sd_X_train</span><span class="p">)</span>
@@ -24086,7 +24113,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                  477
 Model:                          Logit   Df Residuals:                      466
 Method:                           MLE   Df Model:                           10
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                 0.09707
-Time:                        01:08:01   Log-Likelihood:                -293.47
+Time:                        13:02:56   Log-Likelihood:                -293.47
 converged:                       True   LL-Null:                       -325.02
 Covariance Type:            nonrobust   LLR p-value:                 9.337e-10
 ===============================================================================
@@ -24115,16 +24142,18 @@ Diff_Ctrl       0.4915      0.115      4.283      0.000       0.267       0.716
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<p>The table indicates that the Pseud0 R-Squared Value is much lower than the above models. Only 3 predictors are significant in the model above: Head Strikes Differential, Clinch Strikes Differential, and Control Time Differential.</p>
+<p>The table indicates that the Pseudo R-Squared Value is much lower than the above models. Only 3 predictors are significant in the model above: Head Strikes Differential, Clinch Strikes Differential, and Control Time Differential.</p>
 
 </div>
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[216]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[233]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd_X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">sd_X_test</span><span class="p">)</span>  <span class="c1"># Use the same scaler as on the training set</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding Accuracy</span>
+
+<span class="n">sd_X_test_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">sd_X_test</span><span class="p">)</span>  <span class="c1"># Use the same scaler as on the training set</span>
 <span class="n">sd_X_test_with_intercept</span> <span class="o">=</span> <span class="n">add_constant</span><span class="p">(</span><span class="n">sd_X_test_scaled</span><span class="p">)</span>
 
 <span class="c1"># Predict on the test set</span>
@@ -24173,10 +24202,12 @@ Diff_Ctrl       0.4915      0.115      4.283      0.000       0.267       0.716
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[217]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[234]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd_X_train_adj</span> <span class="o">=</span> <span class="n">sd_X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating Dummy Variables</span>
+
+<span class="n">sd_X_train_adj</span> <span class="o">=</span> <span class="n">sd_X_train</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 
 <span class="n">third_quartile_value</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s2">&quot;Diff_Str&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">quantile</span><span class="p">(</span><span class="mf">0.90</span><span class="p">)</span>
 <span class="n">sd_X_train_adj</span><span class="o">.</span><span class="n">loc</span><span class="p">[:,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">sd_X_train_adj</span><span class="p">[</span><span class="s2">&quot;Diff_Str&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="mi">1</span> <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">third_quartile_value</span> <span class="k">else</span> <span class="mi">0</span><span class="p">)</span>
@@ -24205,7 +24236,7 @@ Diff_Ctrl       0.4915      0.115      4.283      0.000       0.267       0.716
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs  ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[218]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[235]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd_X_test_adj</span> <span class="o">=</span> <span class="n">sd_X_test</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
@@ -24237,10 +24268,12 @@ Diff_Ctrl       0.4915      0.115      4.283      0.000       0.267       0.716
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[219]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[236]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Kd_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg_Cat&quot;</span><span class="p">,</span> 
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating New Model</span>
+
+<span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Kd_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg_Cat&quot;</span><span class="p">,</span> 
             <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ground_Cat&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ctrl&quot;</span><span class="p">]</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 <span class="n">sd_X_train_adj_scaled</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">sd_X_train_adj</span><span class="p">)</span>
@@ -24277,24 +24310,24 @@ Dep. Variable:            Fighter_1_W   No. Observations:                  477
 Model:                          Logit   Df Residuals:                      466
 Method:                           MLE   Df Model:                           10
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                 0.09095
-Time:                        01:08:11   Log-Likelihood:                -295.46
+Time:                        13:03:04   Log-Likelihood:                -295.46
 converged:                       True   LL-Null:                       -325.02
 Covariance Type:            nonrobust   LLR p-value:                 5.313e-09
-===============================================================================
-                  coef    std err          z      P&gt;|z|      [0.025      0.975]
--------------------------------------------------------------------------------
-const           0.3509      0.099      3.533      0.000       0.156       0.546
-Diff_Kd         0.1576      0.103      1.524      0.127      -0.045       0.360
-Diff_Str       -0.0407      0.099     -0.410      0.682      -0.235       0.154
-Diff_Td        -0.0416      0.100     -0.416      0.678      -0.237       0.154
-Diff_Sub        0.1777      0.109      1.635      0.102      -0.035       0.391
-Diff_Head       0.4444      0.113      3.941      0.000       0.223       0.665
-Diff_Body       0.1346      0.105      1.279      0.201      -0.072       0.341
-Diff_Leg        0.0788      0.104      0.759      0.448      -0.125       0.282
-Diff_Clinch     0.3669      0.114      3.206      0.001       0.143       0.591
-Diff_Ground    -0.0500      0.112     -0.446      0.656      -0.270       0.170
-Diff_Ctrl       0.4914      0.108      4.553      0.000       0.280       0.703
-===============================================================================
+===================================================================================
+                      coef    std err          z      P&gt;|z|      [0.025      0.975]
+-----------------------------------------------------------------------------------
+const               0.3509      0.099      3.533      0.000       0.156       0.546
+Diff_Kd_Cat         0.1576      0.103      1.524      0.127      -0.045       0.360
+Diff_Str_Cat       -0.0407      0.099     -0.410      0.682      -0.235       0.154
+Diff_Td_Cat        -0.0416      0.100     -0.416      0.678      -0.237       0.154
+Diff_Sub_Cat        0.1777      0.109      1.635      0.102      -0.035       0.391
+Diff_Head           0.4444      0.113      3.941      0.000       0.223       0.665
+Diff_Body_Cat       0.1346      0.105      1.279      0.201      -0.072       0.341
+Diff_Leg_Cat        0.0788      0.104      0.759      0.448      -0.125       0.282
+Diff_Clinch         0.3669      0.114      3.206      0.001       0.143       0.591
+Diff_Ground_Cat    -0.0500      0.112     -0.446      0.656      -0.270       0.170
+Diff_Ctrl           0.4914      0.108      4.553      0.000       0.280       0.703
+===================================================================================
 </pre>
 </div>
 </div>
@@ -24306,10 +24339,12 @@ Diff_Ctrl       0.4914      0.108      4.553      0.000       0.280       0.703
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[220]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[237]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd_X_test_scaled_adj</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">sd_X_test_adj</span><span class="p">)</span>  <span class="c1"># Use the same scaler as on the training set</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding Accuracy</span>
+
+<span class="n">sd_X_test_scaled_adj</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">sd_X_test_adj</span><span class="p">)</span>  <span class="c1"># Use the same scaler as on the training set</span>
 <span class="n">sd_X_test_with_intercept_adj</span> <span class="o">=</span> <span class="n">add_constant</span><span class="p">(</span><span class="n">sd_X_test_scaled_adj</span><span class="p">)</span>
 
 <span class="c1"># Predict on the test set</span>
@@ -24358,10 +24393,12 @@ Diff_Ctrl       0.4914      0.108      4.553      0.000       0.280       0.703
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[221]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[238]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">features</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ctrl&quot;</span><span class="p">]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Creating New Model</span>
+
+<span class="n">features_sd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;Diff_Head&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Clinch&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ctrl&quot;</span><span class="p">]</span>
 
 <span class="n">sd_X_train_adj</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ground&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
@@ -24370,7 +24407,7 @@ Diff_Ctrl       0.4914      0.108      4.553      0.000       0.280       0.703
 
 <span class="n">sd_adj_logit_model</span> <span class="o">=</span> <span class="n">sm</span><span class="o">.</span><span class="n">Logit</span><span class="p">(</span><span class="n">sd_y_train</span><span class="p">,</span> <span class="n">sd_X_train_adj_with_intercept</span><span class="p">)</span>
 <span class="n">sd_result_adj</span> <span class="o">=</span> <span class="n">sd_adj_logit_model</span><span class="o">.</span><span class="n">fit</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sd_result_adj</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sd_result_adj</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features_sd</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -24399,7 +24436,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                  477
 Model:                          Logit   Df Residuals:                      473
 Method:                           MLE   Df Model:                            3
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                 0.07839
-Time:                        01:08:20   Log-Likelihood:                -299.54
+Time:                        13:03:12   Log-Likelihood:                -299.54
 converged:                       True   LL-Null:                       -325.02
 Covariance Type:            nonrobust   LLR p-value:                 4.991e-11
 ===============================================================================
@@ -24421,10 +24458,12 @@ Diff_Ctrl       0.4997      0.106      4.727      0.000       0.293       0.707
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[222]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[239]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">sd_X_test_adj</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ground&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Finding Accuracy</span>
+
+<span class="n">sd_X_test_adj</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;Diff_Kd&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Str&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Td&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Sub&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Body&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Leg&quot;</span><span class="p">,</span> <span class="s2">&quot;Diff_Ground&quot;</span><span class="p">],</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 
 <span class="n">sd_X_test_scaled_adj</span> <span class="o">=</span> <span class="n">scaler</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">sd_X_test_adj</span><span class="p">)</span>  <span class="c1"># Use the same scaler as on the training set</span>
 <span class="n">sd_X_test_with_intercept_adj</span> <span class="o">=</span> <span class="n">add_constant</span><span class="p">(</span><span class="n">sd_X_test_scaled_adj</span><span class="p">)</span>
@@ -24436,8 +24475,8 @@ Diff_Ctrl       0.4997      0.106      4.727      0.000       0.293       0.707
 <span class="n">sd_y_pred_binary</span> <span class="o">=</span> <span class="p">(</span><span class="n">sd_y_pred</span> <span class="o">&gt;</span> <span class="mf">0.5</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
 
 <span class="c1"># Calculate accuracy</span>
-<span class="n">accuracy</span> <span class="o">=</span> <span class="p">(</span><span class="n">sd_y_pred_binary</span> <span class="o">==</span> <span class="n">sd_y_test</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">accuracy_adj_3</span> <span class="o">=</span> <span class="p">(</span><span class="n">sd_y_pred_binary</span> <span class="o">==</span> <span class="n">sd_y_test</span><span class="p">)</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy_adj_3</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -24491,11 +24530,11 @@ Diff_Ctrl       0.4997      0.106      4.727      0.000       0.293       0.707
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[210]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[240]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Model</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">result_adj_1</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">result_adj_1</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features_adj</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -24521,7 +24560,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                 2312
 Model:                          Logit   Df Residuals:                     2303
 Method:                           MLE   Df Model:                            8
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                  0.4750
-Time:                        01:07:37   Log-Likelihood:                -801.38
+Time:                        13:03:16   Log-Likelihood:                -801.38
 converged:                       True   LL-Null:                       -1526.4
 Covariance Type:            nonrobust   LLR p-value:                8.244e-308
 ===============================================================================
@@ -24548,7 +24587,7 @@ Diff_Ctrl       1.3941      0.099     14.153      0.000       1.201       1.587
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[212]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[241]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Accuracy for Model</span>
@@ -24589,11 +24628,11 @@ Diff_Ctrl       1.3941      0.099     14.153      0.000       1.201       1.587
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[248]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[242]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Model</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">ud_result_adj_1</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">ud_result_adj_1</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features_adj_1</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -24619,7 +24658,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                 1778
 Model:                          Logit   Df Residuals:                     1770
 Method:                           MLE   Df Model:                            7
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                  0.6404
-Time:                        01:12:06   Log-Likelihood:                -417.79
+Time:                        13:03:20   Log-Likelihood:                -417.79
 converged:                       True   LL-Null:                       -1161.7
 Covariance Type:            nonrobust   LLR p-value:                     0.000
 ===============================================================================
@@ -24645,11 +24684,11 @@ Diff_Ctrl       1.7921      0.148     12.138      0.000       1.503       2.082
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[249]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[243]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Accuracy for Model</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy_adj_2</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
@@ -24686,11 +24725,11 @@ Diff_Ctrl       1.7921      0.148     12.138      0.000       1.503       2.082
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[223]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[244]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Model</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">sd_result_adj</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sd_result_adj</span><span class="o">.</span><span class="n">summary</span><span class="p">(</span><span class="n">xname</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;const&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="n">features_sd</span><span class="p">))</span>
 </pre></div>
 
      </div>
@@ -24716,7 +24755,7 @@ Dep. Variable:            Fighter_1_W   No. Observations:                  477
 Model:                          Logit   Df Residuals:                      473
 Method:                           MLE   Df Model:                            3
 Date:                Tue, 12 Dec 2023   Pseudo R-squ.:                 0.07839
-Time:                        01:09:21   Log-Likelihood:                -299.54
+Time:                        13:03:25   Log-Likelihood:                -299.54
 converged:                       True   LL-Null:                       -325.02
 Covariance Type:            nonrobust   LLR p-value:                 4.991e-11
 ===============================================================================
@@ -24738,11 +24777,11 @@ Diff_Ctrl       0.4997      0.106      4.727      0.000       0.293       0.707
 </div><div class="jp-Cell jp-CodeCell jp-Notebook-cell   ">
 <div class="jp-Cell-inputWrapper">
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[224]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[245]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Accuracy for Model</span>
-<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Accuracy: </span><span class="si">{</span><span class="n">accuracy_adj_3</span><span class="si">:</span><span class="s2">.2f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 </pre></div>
 
      </div>
