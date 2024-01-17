@@ -10,4 +10,4 @@ Important Note: The dataset used in this project contains fight data from every 
 
 **ML Techniques Used**
 
--Logistic Regression
+- Logistic Regression
