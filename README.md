@@ -7,3 +7,8 @@ This project is a machine learning application aimed at predicting MMA fight out
 * Seaborn
 * Scikit-learn
 * Statsmodels
+* BeautifulSoup
+
+## Applied Techniques ##
+* Web Scraping
+* Logistic Regression
